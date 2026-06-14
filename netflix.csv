@@ -1,0 +1,37 @@
+import pandas as pd
+
+data = {
+    "type": [
+        "Movie","Movie","TV Show","Movie","TV Show",
+        "Movie","Movie","TV Show","Movie","TV Show"
+    ],
+    "title": [
+        "Red Notice","Extraction","Wednesday","Bird Box","Stranger Things",
+        "The Irishman","Army of the Dead","Money Heist","Enola Holmes","Dark"
+    ],
+    "country": [
+        "United States","United States","United States","United States","United States",
+        "United States","United States","Spain","United Kingdom","Germany"
+    ],
+    "release_year": [
+        2021,2020,2022,2018,2019,
+        2019,2021,2020,2020,2017
+    ],
+    "rating": [
+        "PG-13","R","TV-14","R","TV-14",
+        "R","R","TV-MA","PG-13","TV-MA"
+    ],
+    "listed_in": [
+        "Action","Action","Comedy",
+        "Drama","Drama",
+        "Crime","Action",
+        "Crime","Adventure","Drama"
+    ]
+}
+
+df = pd.DataFrame(data)
+
+df.to_csv("netflix.csv", index=False)
+
+print("netflix.csv created successfully!")
+df.head()
